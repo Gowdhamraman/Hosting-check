@@ -1,0 +1,23 @@
+Steps to Repair the Table: 
+
+Open MySQL Command Line:
+
+On your terminal, log into MySQL with your credentials.
+
+# mysql -u database username -p
+
+Enter your password when prompted.
+
+Select Your Database:
+
+# USE Database_name;
+
+Repair the Table:
+	
+Run the repair command on the table. Eg :: wp_options
+	
+# REPAIR TABLE wp_options;
+
+You can verify if the table is repaired by rerunning the CHECK TABLE command.
+
+# CHECK TABLE wp_options;
