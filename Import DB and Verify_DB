@@ -1,0 +1,19 @@
+To find the exact size of a MySQL database and its tables, you can use SQL queries to retrieve this information from the information_schema database, which contains metadata about all databases and tables in the MySQL server.
+
+Log into MySQL:
+
+`mysql -u username -p`
+
+Replace username with your MySQL username. You will be prompted for your password.
+
+
+Run the desired query: Copy and paste any of the above queries into the MySQL command line interface and execute it.
+
+`SELECT table_schema AS "Database",
+       ROUND(SUM(data_length + index_length) / 1024 / 1024, 2) AS "Size (MB)"
+FROM information_schema.TABLES
+WHERE table_schema = "database_name"
+GROUP BY table_schema;`
+
+
+To find the size of a specific database, replace database_name with the name of your database:
