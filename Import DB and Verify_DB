@@ -1,3 +1,17 @@
+
+Importing a Database (Restore)
+
+`mysql -u username -p database_name < database_backup.sql`
+
+Replace username with your MySQL username, database_name with the name of the database you want to import, and database_backup.sql with the name of the SQL file containing the database backup.
+Enter your MySQL password when prompted.
+
+
+The database will be imported from the specified SQL file.
+
+
+
+
 To find the exact size of a MySQL database and its tables, you can use SQL queries to retrieve this information from the information_schema database, which contains metadata about all databases and tables in the MySQL server.
 
 Log into MySQL:
